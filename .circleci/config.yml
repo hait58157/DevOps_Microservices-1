@@ -38,7 +38,7 @@ jobs:
           name: install dependencies
           command: |
             cd project-ml-microservice-kubernetes
-            . .env/bin/activate
+            . venv/bin/activate
             make install
       - save_cache:
           paths:
