@@ -1,1 +1,31 @@
-<paste log output from Kubernetes-mediated prediction, here>
+(.devops) haitv15@CVP00172271E:~/DevOps_Microservices/project-ml-microservice-kubernetes$ kubectl get pods
+NAME                                                 READY   STATUS              RESTARTS   AGE
+project-ml-microservice-kubernetes-967ddd85b-bqr4w   0/1     ContainerCreating   0          2m54s
+(.devops) haitv15@CVP00172271E:~/DevOps_Microservices/project-ml-microservice-kubernetes$ kubectl get pods
+NAME                                                 READY   STATUS    RESTARTS   AGE
+project-ml-microservice-kubernetes-967ddd85b-bqr4w   1/1     Running   0          24m
+(.devops) haitv15@CVP00172271E:~/DevOps_Microservices/project-ml-microservice-kubernetes$ kubectl port-forward deployment.apps/project-ml-microservice-kubernetes 8000:80
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
+Handling connection for 8000
+
+
+
+
+
+
+haitv15@CVP00172271E:~/DevOps_Microservices/project-ml-microservice-kubernetes$ ./make_prediction.sh
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
+haitv15@CVP00172271E:~/DevOps_Microservices/project-ml-microservice-kubernetes$ ./make_prediction.sh
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
