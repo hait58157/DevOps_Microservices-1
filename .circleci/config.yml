@@ -31,7 +31,7 @@ jobs:
           name: create virtualenv
           command: |
             ls
-            cd microservice-aws-and-kubernetes/project-ml-microservice-kubernetes
+            cd project-ml-microservice-kubernetes
             make setup
 
       - run:
